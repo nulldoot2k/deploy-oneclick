@@ -1,5 +1,7 @@
 # Tiêu đề: One Click
 
+<img src="https://iili.io/HMRG60X.png" />
+
 > Mô tả: Công cụ tự động hóa quá trình triển khai
 
 ## Task
