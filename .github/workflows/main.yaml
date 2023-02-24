@@ -1,0 +1,69 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  success:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run success
+        run: exit 0
+      - name: send message
+        uses: up9cloud/action-notify@master
+        if: cancelled() == false
+        env:
+          GITHUB_JOB_STATUS: ${{ job.status }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.telegram_token }}
+          TELEGRAM_CHAT_ID: ${{ secrets.telegram_to }}
+        with:
+          status: ${{job.status}}
+  fail:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: notification
+        if: cancelled() == false
+        uses: xinthink/action-telegram@v1.1
+        with:
+          botToken: ${{ secrets.telegram_token }}
+          chatId: ${{ secrets.telegram_to }}
+          jobStatus: ${{ job.status }}
+
+  notification:
+    runs-on: ubuntu-latest
+    steps:
+      - name: irc push
+        uses: rectalogic/notify-irc@v1
+        if: github.event_name == 'push'
+        with:
+          channel: "#alert-nulldoot"
+          server: "irc.libera.chat"
+          nickname: my-github-notifier
+          message: |
+              ${{ github.actor }} created commit:
+              Commit message: ${{ github.event.commits[0].message }}
+              Repository: ${{ github.repository }}
+              Changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+      - name: irc pull request
+        uses: rectalogic/notify-irc@v1
+        if: github.event_name == 'pull_request'
+        with:
+          channel: "#alert-nulldoot"
+          server: "irc.libera.chat"
+          nickname: my-github-notifier
+          message: |
+            ${{ github.actor }} opened PR ${{ github.event.pull_request.html_url }}
+      - name: irc tag created
+        uses: rectalogic/notify-irc@v1
+        if: github.event_name == 'create' && github.event.ref_type == 'tag'
+        with:
+          channel: "#alert-nulldoot"
+          server: "irc.libera.chat"          
+          nickname: my-github-notifier
+          message: |
+            ${{ github.actor }} tagged ${{ github.repository }} ${{ github.event.ref }}
