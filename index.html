@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Công cụ tự động hóa quá trình triển khai</title>
+</head>
+<body>
+  <style>
+    .container {
+      max-width: 100%;
+      height: 100%;
+      background: #2385ff;
+      padding: 20px;
+      margin-right: 20%;
+      margin-left: 20%;
+    }
+  </style>
+  <br><br><br>
+  <div class="container">
+    <h1 align="center">Công cụ tự động hóa quá trình triển khai</h1>
+
+    <div class="hang1">
+      <button>Chọn tác vụ</button>
+      <select name="Tác vụ" id="">
+        <option value="empty">Tác vụ</option>
+        <option value="Cluster Single">Cluster Single</option>
+        <option value="Cluster HA">Cluster HA</option>
+      </select>
+      <button>Check</button>
+    </div>
+
+    <div class="hang2">
+      <button>nhập số nút</button>
+      <input type="text" name="number" id="" value="0">
+      <select name="" id="">
+        <option value="">Chọn Network</option>
+        <option value="">cilinum</option>
+        <option value="">calico</option>
+        <option value="">airplane</option>
+      </select>
+      <select name="" id="">
+        <option value="">Chọn Volume</option>
+        <option value="">nfs</option>
+        <option value="">longhorn</option>
+      </select>
+    </div>
+
+    <div class="hang3">
+      
+    </div>
+
+    <div id="show-hide" class="hang4">
+      <input type="text" name="" id="" value="Nhập Ip Address">
+      <input type="text" name="" id="" value="Nhập tên node">
+      <button>Run</button>
+    </div>
+
+
+  </div>
+</body>
+</html>
