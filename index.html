@@ -26,14 +26,14 @@
                     <div class="col">
                         Chọn tác vụ <label class="check" id="checkTacVu">(*)</label>
                         <select name="Tác vụ" id="">
-                          <option value=""></option>
+                          <option value="">Tác vụ</option>
                           <option value="Cluster Single">Cluster Single</option>
                           <option value="Cluster HA">Cluster HA</option>
                         </select>
                     </div>
                     <div class="col">Chọn Network<label class="check" id="checkNetwork">(*)</label>
                         <select name="" id="">
-                            <option value="" ></option>
+                            <option value="" >Network</option>
                             <option value="">cilinum</option>
                             <option value="">calico</option>
                             <option value="">airplane</option>
@@ -41,7 +41,7 @@
                     </div>
                     <div class="col">Chọn Volume<label class="check" id="checkVolume">(*)</label>
                         <select name="" id="">
-                          <option value=""></option>
+                          <option value="">Volume</option>
                           <option value="">nfs</option>
                           <option value="">longhorn</option>
                         </select>
@@ -52,7 +52,7 @@
                     <div class="col">
                         Nhập số nút
                         <label class="check" id="checkNut">(*)</label>
-                        <input type="number" name="number" min="3" max="50" />
+                        <input value="0" type="number" name="number" min="3" max="50" />
                     </div>
                 </div>
                 <div id="show-hide" class="row">
@@ -62,7 +62,7 @@
                     <div class="col"><button type="button" class="btn btn-success">import key</button></div>
                 </div>
                 <label for="comment">Kết quả:</label>
-                <textarea class="form-control" rows="5" id="comment"></textarea>
+                <textarea class="form-control" rows="5" id="comment">console..</textarea>
                 <br>
                 <button type="button" class="btn btn-warning">Check</button>
                 <button type="button" class="btn btn-primary">Run</button>

@@ -2,7 +2,24 @@
 
 <img src="https://iili.io/HMRG60X.png" />
 
+
+## Roles
+
+- Push code: theo branch 
+  
+  + Branch: vài trò cụ thể
+  + beta-name-version
+
+- Commit Theo Syntax: Name: Up/Docx/Del/Fix ...
+
+## Deploy
+
+
 > Mô tả: Công cụ tự động hóa quá trình triển khai
+
+> Rút ngắn quá trình deploy cluster thủ công
+
+> Cơ chế cụm đầy đủ
 
 ## Task
 - Tác vụ 
