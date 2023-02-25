@@ -1,6 +1,6 @@
 # Tiêu đề: One Click
 
-<img src="https://iili.io/HMRG60X.png" />
+<img src="https://iili.io/HMNQyl4.png" />
 
 
 ## Roles
@@ -10,9 +10,9 @@
   + Branch: vài trò cụ thể
   + beta-name-version
 
-- Commit Theo Syntax: Name: Up/Docx/Del/Fix ...
+- Commit Theo Syntax: "Name: Up/Docx/Del/Fix - ... file/folder"
 
-## Deploy
+## Deploy Tools
 
 
 > Mô tả: Công cụ tự động hóa quá trình triển khai
@@ -21,7 +21,7 @@
 
 > Cơ chế cụm đầy đủ
 
-## Task
+## Task Step
 - Tác vụ 
 	
 	+ Tạo cụm đơn
